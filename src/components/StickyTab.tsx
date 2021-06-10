@@ -30,6 +30,14 @@ const TabItemText = styled.Text`
   color: #fefefe;
 `;
 
+const StyledIndicator = styled.View`
+  width: 10px;
+  height: 2px;
+  background-color: #000000;
+  position: absolute;
+  bottom: 0;
+`;
+
 type TabContent = {
   id: number;
   name: string;
@@ -74,6 +82,7 @@ function StickyTab({
             <TabItemText>{tabItem.name}</TabItemText>
           </TouchableWithoutFeedback>
         ))}
+        <StyledIndicator />
       </StyledTabNavigator>
 
       <FlatList
